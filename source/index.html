@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Интернет - магазин автозапчастей The Parts">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="fonts/robotoregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.createElement( "picture" );
+    //По руководству автора - http://scottjehl.github.io/picturefill/
+  </script>
+  <title>The Parts</title>
+</head>
+<body class="body">
+  <header class="header">
+    <div class="header__wrapper header__wrapper--red">
+      <div class="header__wrapper-inner">
+        <p class="header__adress">СПб, Московское ш. д.13к8</p>
+        <p class="header__time">Работаем ежедневно с 09:00 до 21:00</p>
+        <a href="tel:88122108671" class="header__phone">8 812 210 86 71</a>
+      </div>
+    </div>
+    <div class="header__wrapper header__wrapper--white">
+      <div class="header__wrapper-inner">
+        <div class="header__logo-wrapper">
+          <a class="header__logo-link">
+            <img src="img/logo.svg" width="210" height="40" alt="Логотип">
+          </a>
+        </div>
+        <p class="header__description"><span>on-line</span> гипермаркет автозапчастей</p>
+        <div class="header__search">
+          <label for="search-field" class="visually-hidden">Поиск по магазину</label>
+          <input type="text" placeholder="Введите код запчасти или VIN"
+                 name="search" id="search-field" maxlength="50">
+          <a href="#" class="header__search-link">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </div>
+        <a href="#" class="header__basket">Корзина</a>
+        <div class="header__registration">
+          <span class="header__login">Вход</span>
+          <a href="#" class="header__registration-link">Регистрация</a>
+        </div>
+      </div>
+    </div>
+    <nav class="header__nav">
+      <div class="header__nav-wrapper">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link">Каталоги</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link">Частным клиентам</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link">Оптовым клиентам</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link">Поставщикам запчастей</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link">Наши контакты</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link">Личный кабинет</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main"></main>
+  <footer class="footer"></footer>
+  <!-- <script src="js/script.js"></script> -->
+</body>
+</html>
