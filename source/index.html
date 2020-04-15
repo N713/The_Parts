@@ -9,6 +9,8 @@
   <link rel="preload" href="fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/gothampro.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/gothampromedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/gothamprobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement( "picture" );
@@ -29,7 +31,7 @@
     <div class="header__wrapper header__wrapper--white">
       <div class="header__wrapper-inner">
         <div class="header__logo-wrapper">
-          <a class="header__logo-link">
+          <a href="#" class="header__logo-link">
             <img src="img/logo.svg" width="210" height="40" alt="Логотип">
           </a>
         </div>
@@ -255,7 +257,7 @@
             </div>
             <div class="main__item-wrapper-amount">
               <input type="number" name="amount2" id="amount2" value="10">
-              <label class="visually-hidden" for="amount">Количество</label>
+              <label class="visually-hidden" for="amount2">Количество</label>
               <div class="main__buttons-wrapper">
                 <button type="button" class="main__item-button main__item-button--minus">
                   <span class="visually-hidden">Уменьшить</span>
@@ -340,11 +342,49 @@
         </ul>
         <section class="summary">
           <h2 class="visually-hidden">Итого</h2>
+          <div class="summary__wrapper">
+            <div class="summary__inner-wrapper summary__inner-wrapper--left">
+              <p>Общая стоимость: <span>3500.00 руб.</span> (включая НДС)</p>
+              <p>Заказано позиций: 1 шт.</p>
+              <p>Заказано деталей: 10 шт.</p>
+              <div class="summary__buttons-wrapper">
+                <button class="button summary__recalculate" type="button" name="button-recalculate" value="recalculate">Пересчитать</button>
+                <a class="summary__reset" href="#">Очистить корзину</a>
+              </div>
+            </div>
+            <div class="summary__inner-wrapper summary__inner-wrapper--right">
+              <p>Итого: <span>3213.00 руб.</span></p>
+              <p>Если вы набрали в корзину все необходимые запчасти и указали их количество,
+                нажмите «Перейти к оформлению» и ваш заказ будет передан на обработку операторам компании.
+              </p>
+            </div>
+          </div>
+          <p class="summary__warning">Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!</p>
+          <p class="summary__description">
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание!
+          </p>
+          <div class="summary__checkbox checkbox">
+            <input type="checkbox" name="agreement" id="agreement" value="agreed" checked>
+            <label for="agreement">
+              <span>Да, я тщательно проверил правильность заказываемых запчастей. С <a href="#" class="summary__rules-link">правилами возврата</a> согласен.</span>
+            </label>
+          </div>
+          <a href="#" class="button summary__make-buying">Оформить заказ на эти товары</a>
         </section>
       </div>
     </div>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <h2 class="visually-hidden">Подвал</h2>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>
