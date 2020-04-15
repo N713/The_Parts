@@ -1,0 +1,21 @@
+.button {
+  min-height: 39px;
+  border: 1px solid #c6e2ff;
+  border-radius: 39px;
+  background-color: $blue;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($blue, 20);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}

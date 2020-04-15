@@ -1,0 +1,149 @@
+.summary {
+  @include reset;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: $gotham;
+}
+
+.summary__wrapper,
+.summary__buttons-wrapper,
+.summary__checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.summary__wrapper {
+  margin-bottom: 45px;
+}
+
+.summary__wrapper p {
+  @include reset;
+}
+
+.summary__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.summary__inner-wrapper--left {
+  text-align: left;
+}
+
+.summary__inner-wrapper--right {
+  text-align: right;
+}
+.summary__inner-wrapper--left p {
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.summary__inner-wrapper--left span {
+  color: $blue;
+}
+
+.summary__buttons-wrapper {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.summary__recalculate {
+  width: 170px;
+  margin-right: 27px;
+}
+
+.summary__reset {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.71;
+  color: #757474;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(#757474, 20);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.summary__inner-wrapper--right p:first-of-type {
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.summary__inner-wrapper--right p:first-of-type span {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 0.8;
+  color: $blue;
+}
+
+.summary__inner-wrapper--right p:last-of-type {
+  width: 460px;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.summary__warning {
+  @include reset;
+
+  font-size: 14px;
+  font-weight: 900;
+  color: $red;
+  margin-bottom: 10px;
+}
+
+.summary__description {
+  @include reset;
+
+  font-size: 12px;
+  margin-bottom: 21px;
+}
+
+
+.summary__checkbox,
+.summary__checkbox label {
+  width: 60.5%;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.summary__checkbox {
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.summary__rules-link {
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    color: darken($blue, 20);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.summary__make-buying {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 324px;
+  margin-bottom: 50px;
+}
