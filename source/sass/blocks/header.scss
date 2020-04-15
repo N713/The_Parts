@@ -437,15 +437,32 @@
 }
 
 @media (max-width: $mobile) {
-  .header__registration,
-  .header__search,
   .header__phone {
     display: none;
+  }
+
+  .header__search {
+    width: 35%;
   }
 
   .header__basket {
     margin-left: auto;
     margin-right: 10px;
+  }
+
+  .header__registration {
+    @include reset;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+
+  .header__login,
+  .header__registration-link {
+    &:hover {
+      color: #ffffff;
+    }
   }
 
   .header__wrapper--white {
