@@ -9,6 +9,10 @@
   @include reset;
 }
 
+.header__nav-burger {
+  display: none;
+}
+
 .header,
 .header__wrapper {
   width: 100%;
@@ -209,6 +213,9 @@
 }
 
 .header__login {
+  text-decoration: none;
+  color: $dark;
+
   &:hover {
     cursor: pointer;
     color: $red;
@@ -356,5 +363,116 @@
   background-image: url("../img/icon-home.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: $tablet) {
+  .header__description,
+  .header__basket span,
+  .header__registration-link::before {
+    display: none;
+  }
+
+  .header__search {
+    width: 45%;
+  }
+
+  .header__registration {
+    width: 120px;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding-top: 15px;
+  }
+
+  .header__login {
+    margin-bottom: 5px;
+    text-align: right;
+  }
+
+  .header__registration {
+    text-align: right;
+  }
+
+  .header__phone {
+    font-size: 15px;
+  }
+
+  .header__phone::before {
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+  }
+
+  .header__nav {
+    padding: 0;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__nav-burger {
+    box-sizing: border-box;
+    padding-left: 2%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    background-color: darken($blue, 15);
+  }
+
+  .header__nav-list-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 1px solid #ffffff;
+    padding: 0 55px;
+  }
+
+  .header__nav-list-item:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .header__registration,
+  .header__search,
+  .header__phone {
+    display: none;
+  }
+
+  .header__basket {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .header__wrapper--white {
+    min-height: 70px;
+  }
+
+  .header__logo-wrapper {
+    min-width: 135px;
+    min-height: 50px;
+  }
+
+  .header__logo-link img {
+    width: 120px;
+    height: auto;
+  }
+
+  .header__adress,
+  .header__time {
+    @include reset;
+    width: 100%;
+    border: none;
+    font-size: 12px;
+    min-height: 20px;
+  }
+
+  .header__wrapper--contacts {
+    flex-direction: column;
+  }
 }
 

@@ -19,3 +19,15 @@
     opacity: 0.2;
   }
 }
+
+@media (max-width: $tablet) {
+  .button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .button {
+    font-size: 10px;
+  }
+}

@@ -5,6 +5,7 @@
   min-height: 82px;
   background-color: #e3e3e3;
   font-family: $font;
+  overflow-x: hidden;
 }
 
 .footer__wrapper {
@@ -96,5 +97,28 @@
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+@media (max-width: $tablet) {
+  .footer__socials-wrapper {
+    width: 55%;
+  }
+
+  .footer__phone {
+    display: none;
+  }
+
+  .footer__wrapper {
+    padding: 0 10px;
+  }
+
+  .footer__logo-link img {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer__socials-wrapper span {
+    display: none;
   }
 }
