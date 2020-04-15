@@ -8,6 +8,7 @@
   <link rel="preload" href="fonts/robotoregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/gothampro.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement( "picture" );
@@ -75,7 +76,75 @@
   </header>
   <main class="main">
     <h2>Корзина товаров</h2>
-
+    <div class="main__container">
+      <div class="main__wrapper">
+        <ul class="main__items-header">
+          <li class="main__items-header-item main__items-header-item--number">Артикул</li>
+          <li class="main__items-header-item main__items-header-item--name">Наименование</li>
+          <li class="main__items-header-item main__items-header-item--info">Информация</li>
+          <li class="main__items-header-item main__items-header-item--action">Действие</li>
+          <li class="main__items-header-item main__items-header-item--amount">Количество</li>
+          <li class="main__items-header-item main__items-header-item--price">Цена</li>
+        </ul>
+        <ul class="main__items">
+          <li class="main__item">
+            <div class="main__item-wrapper-number">
+              <img src="img/lamp.png" width="78" height="61" alt="Изображение">
+              <span>1987674542</span>
+            </div>
+            <div class="main__item-wrapper-name">
+              <div class="main__item-wrapper-inner">
+                <span class="main__item-brand">Bosch</span>
+                <span class="main__item-type">Оригинал</span>
+              </div>
+              <p>
+                Лампа накаливания, фонарь освещения номерного знака;
+                Лампа накаливания, стояночные огни / габаритные фонари;
+                Лампа накаливания, габаритный огонь
+              </p>
+              <div>
+                <label for="comment-field">Комментарий:</label>
+                <input type="text" name="comment" id="comment-field">
+              </div>
+            </div>
+            <div class="main__item-wrapper-info">
+              <span class="main__parts">партиями по 10 шт.</span>
+              <div class="main__signals"></div>
+              <span class="main__waiting">Ожидаем на складе МШ: 1-1 дн.</span>
+              <div class="main__actuality">
+                <span>Добавлено в корзину: 24.02.2020 14:17</span>
+                <span>Актуальность: 24.02.2020 14:17</span>
+              </div>
+            </div>
+            <div class="main__item-wrapper-actions">
+              <div class="main__item-checkbox-wrapper">
+                <input type="checkbox" name="delete" id="delete-item">
+                <label for="delete-item">удалить</label>
+              </div>
+              <div class="main__item-checkbox-wrapper">
+                <input type="checkbox" name="add" id="add-item">
+                <label for="add-item">заказать</label>
+              </div>
+            </div>
+            <div class="main__item-wrapper-amount">
+              <input type="number" name="amount" id="amount">
+              <label class="visually-hidden" for="amount">Количество</label>
+              <div class="main__buttons-wrapper">
+                <button type="button" class="main__item-button main__item-button--minus">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <button type="button" class="main__item-button main__item-button--plus">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+            </div>
+            <div class="main__item-wrapper-price">
+              <span>20.00 руб.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </main>
   <footer class="footer"></footer>
   <script src="js/script.js"></script>

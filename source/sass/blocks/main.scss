@@ -1,0 +1,133 @@
+.main,
+.main h2 {
+  @include reset;
+}
+
+.main {
+  width: 100%;
+  padding-top: 30px;
+  font-family: $gotham;
+}
+
+.main h2 {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.main h2:before {
+  content: "";
+  display: inline-block;
+  width: 37px;
+  height: 10px;
+  margin-right: 10px;
+  background-image: url("../img/logo-small.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main__container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.main__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.main__items-header {
+  @include reset;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 35px;
+  background-color: #c6e2ff;
+}
+
+.main__items-header {
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 33px;
+  margin-bottom: 35px;
+}
+
+.main__items-header-item {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.71;
+}
+
+.main__items-header-item--number,
+.main__item-wrapper-number {
+  width: (135 / 1140) * 100%;
+}
+
+.main__items-header-item--name,
+.main__item-wrapper-name {
+  width: (360 / 1140) * 100%;
+}
+
+.main__items-header-item--info,
+.main__item-wrapper-info {
+  width: (270 / 1140) * 100%;
+}
+
+.main__items-header-item--action,
+.main__item-wrapper-actions {
+  width: (158 / 1140) * 100%;
+}
+
+.main__items-header-item--amount,
+.main__item-wrapper-amount {
+  width: (145 / 1140) * 100%;
+}
+
+.main__items-header-item--price,
+.main__item-wrapper-price {
+  width: (80 / 1140) * 100%;
+  text-align: right;
+}
+
+.main__items {
+  @include reset;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 33px;
+}
+
+.main__item {
+  display: flex;
+}
+
+.main__item-wrapper-name,
+.main__item-wrapper-number,
+.main__item-wrapper-info,
+.main__item-wrapper-actions,
+.main__item-wrapper-amount,
+.main__item-wrapper-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main__item-wrapper-number img {
+  margin-bottom: 5px;
+}
+
+.main__item-wrapper-number span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2;
+  color: $blue;
+  text-align: left;
+}
