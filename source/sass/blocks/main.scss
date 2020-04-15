@@ -41,6 +41,10 @@
   padding: 0 15px;
 }
 
+.main__items {
+  border-bottom: 8px solid #c6e2ff;
+}
+
 .main__items-header {
   @include reset;
   display: flex;
@@ -100,12 +104,24 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-left: 8px;
-  padding-right: 33px;
 }
 
 .main__item {
   display: flex;
+  padding-bottom: 17px;
+  padding-top: 19px;
+  border-bottom: 1px solid #c6e2ff;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 33px;
+}
+
+.main__item:first-of-type {
+  padding-top: 0;
+}
+
+.main__item:last-of-type {
+  border-bottom: none;
 }
 
 .main__item-wrapper-name,
@@ -126,8 +142,221 @@
 
 .main__item-wrapper-number span {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 2;
   color: $blue;
   text-align: left;
+}
+
+.main__item-wrapper-inner {
+  margin-bottom: 9px;
+}
+
+.main__item-brand,
+.main__item-type {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+}
+
+.main__item-type--original {
+  color: $blue;
+}
+
+.main__item-type--not-original {
+  color: $red;
+}
+
+.main__item-wrapper-name p {
+  @include reset;
+  width: 90%;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.main__input-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 90%;
+}
+
+.main__item-wrapper-name label {
+  font-size: 12px;
+  line-height: 2;
+  color: $blue;
+  margin-right: 8px;
+}
+
+.main__item-wrapper-name input[type="text"] {
+  box-sizing: border-box;
+  width: 82%;
+  min-height: 28px;
+  border: 1px solid #c6e2ff;
+  border-radius: 25px;
+}
+
+.main__parts {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+}
+
+.main__signals {
+  width: 54px;
+  height: 16px;
+  background-image: url("../img/green-round.svg"), url("../img/green-round.svg"), url("../img/green-round.svg");
+  background-repeat: no-repeat;
+  background-position: left center, left 18px center, left 36px center;
+  margin-bottom: 5px;
+}
+
+.main__waiting {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  margin-bottom: 5px;
+}
+
+.main__actuality {
+  font-size: 12px;
+}
+
+.main__item-wrapper-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main__item-checkbox-wrapper {
+  font-size: 14px;
+  margin-top: 13px;
+}
+
+.main__item-checkbox-wrapper input {
+  margin-right: 12px;
+}
+
+.main__item-wrapper-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.main__item-wrapper-amount input[type="number"] {
+  width: 109px;
+  height: 28px;
+  border: 1px solid #c6e2ff;
+  border-radius: 28px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.main__buttons-wrapper {
+  display: flex;
+}
+
+.main__item-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 26px;
+  border: none;
+  margin: 0 2px;
+  font-size: 30px;
+  color: #ffffff;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    outline: 1px solid darken($blue, 15);
+    color: darken($blue, 15);
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.main__item-button span {
+  position: relative;
+  top: -8px;
+}
+
+.main__item-button--minus {
+  background-color: #c6e2ff;
+}
+
+.main__item-button--plus {
+  background-color: $blue;
+}
+
+.main__item-wrapper-price {
+  width: 80px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.71;
+  color: $blue;
+}
+
+.main__item-wrapper-price span {
+  margin-top: 15px;
+  position: relative;
+  left: 25px;
+}
+
+.main__lower-price {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.main__lower-price span {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 2;
+  color: $blue;
+}
+
+.main__lower-price-wrapper {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 130px;
+  background-color: $red;
+  min-height: 28px;
+  border-radius: 28px;
+  padding-left: 3px;
+  position: relative;
+  margin-left: 15px;
+}
+
+.main__lower-price-wrapper input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+}
+
+.main__lower-price-wrapper span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  color: #ffffff;
+  position: relative;
+  top: -3px;
+  left: 21px;
+}
+
+.main__attention {
+  @include reset;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: $red;
+  word-break: break-all;
+  position: relative;
+  top: 10px;
 }
