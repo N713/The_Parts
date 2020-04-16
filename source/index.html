@@ -22,7 +22,7 @@
   <h1 class="visually-hidden">The Parts</h1>
   <header class="header">
     <div class="header__wrapper header__wrapper--red">
-      <div class="header__wrapper-inner">
+      <div class="header__wrapper-inner header__wrapper--contacts">
         <p class="header__adress">СПб, Московское ш. д.13к8</p>
         <p class="header__time">Работаем ежедневно с 09:00 до 21:00</p>
         <a href="tel:88122108671" class="header__phone">8 812 210 86 71</a>
@@ -44,15 +44,22 @@
             <span class="visually-hidden">Поиск</span>
           </a>
         </div>
-        <a href="#" class="header__basket">Корзина</a>
+        <a href="#" class="header__basket"><span>Корзина</span></a>
         <div class="header__registration">
-          <span class="header__login">Вход</span>
+          <a href="#" class="header__login">Вход</a>
           <a href="#" class="header__registration-link">Регистрация</a>
         </div>
       </div>
     </div>
     <nav class="header__nav">
       <div class="header__nav-wrapper">
+        <div class="header__nav-burger">
+          <button class="burger" type="button">
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1h16M0 6h16M0 11h16" stroke="#ffffff" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
         <ul class="header__nav-list">
           <li class="header__nav-list-item">
             <a href="#" class="header__nav-list-link header__nav-list-link--catalog">Каталоги</a>
