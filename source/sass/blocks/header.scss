@@ -256,6 +256,10 @@
   padding: 0 1%;
 }
 
+.header__nav-phone {
+  display: none;
+}
+
 .header__nav-list {
   @include reset;
   display: flex;
@@ -442,6 +446,32 @@
 }
 
 @media (max-width: $mobile) {
+  .header__nav-phone {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+
+  .header__nav-phone::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+    background-image: url("../img/icon-phone.svg");
+    background-size: 15px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   .header__phone {
     display: none;
   }
