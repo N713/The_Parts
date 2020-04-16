@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Интернет - магазин автозапчастей The Parts">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="fonts/robotoregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/gothampro.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/gothampromedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/gothamprobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.createElement( "picture" );
+    //По руководству автора - http://scottjehl.github.io/picturefill/
+  </script>
+  <title>The Parts</title>
+</head>
+<body class="body">
+  <h1 class="visually-hidden">The Parts</h1>
+  <header class="header">
+    <div class="header__wrapper header__wrapper--red">
+      <div class="header__wrapper-inner header__wrapper--contacts">
+        <p class="header__adress">СПб, Московское ш. д.13к8</p>
+        <p class="header__time">Работаем ежедневно с 09:00 до 21:00</p>
+        <a href="tel:88122108671" class="header__phone">8 812 210 86 71</a>
+      </div>
+    </div>
+    <div class="header__wrapper header__wrapper--white">
+      <div class="header__wrapper-inner">
+        <div class="header__logo-wrapper">
+          <a href="#" class="header__logo-link">
+            <img src="img/logo.svg" width="210" height="40" alt="Логотип">
+          </a>
+        </div>
+        <p class="header__description"><span>on-line</span> гипермаркет автозапчастей</p>
+        <div class="header__search">
+          <label for="search-field" class="visually-hidden">Поиск по магазину</label>
+          <input type="text" placeholder="Введите код запчасти или VIN" name="search" id="search-field" maxlength="50">
+          <a href="#" class="header__search-link">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </div>
+        <a href="#" class="header__basket"><span>Корзина</span></a>
+        <div class="header__registration">
+          <a href="#" class="header__login">Вход</a>
+          <a href="#" class="header__registration-link">Регистрация</a>
+        </div>
+      </div>
+    </div>
+    <nav class="header__nav">
+      <div class="header__nav-wrapper">
+        <div class="header__nav-burger">
+          <button class="burger" type="button">
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1h16M0 6h16M0 11h16" stroke="#ffffff" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <a href="tel:88122108671" class="header__nav-phone">8 812 210 86 71</a>
+        </div>
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link header__nav-list-link--catalog">Каталоги</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link header__nav-list-link--private">Частным клиентам</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link header__nav-list-link--wholesale">Оптовым клиентам</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link header__nav-list-link--suppliers">Поставщикам запчастей</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link header__nav-list-link--contacts">Наши контакты</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-link header__nav-list-link--personal">Личный кабинет</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <h2>Корзина товаров</h2>
+    <div class="main__container">
+      <div class="main__wrapper">
+        <ul class="main__items-header">
+          <li class="main__items-header-item main__items-header-item--number">Артикул</li>
+          <li class="main__items-header-item main__items-header-item--name">Наименование</li>
+          <li class="main__items-header-item main__items-header-item--info">Информация</li>
+          <li class="main__items-header-item main__items-header-item--action">Действие</li>
+          <li class="main__items-header-item main__items-header-item--amount">Количество</li>
+          <li class="main__items-header-item main__items-header-item--price">Цена</li>
+        </ul>
+        <ul class="main__items">
+          <li class="main__item">
+            <div class="main__item-wrapper-number">
+              <img src="img/lamp.png" width="78" height="61" alt="Изображение">
+              <span>1987674542</span>
+            </div>
+            <div class="main__item-wrapper-name">
+              <div class="main__item-wrapper-inner">
+                <span class="main__item-brand">Bosch</span>
+                <span class="main__item-type main__item-type--original">Оригинал</span>
+              </div>
+              <p>
+                Лампа накаливания, фонарь освещения номерного знака;
+                Лампа накаливания, стояночные огни / габаритные фонари;
+                Лампа накаливания, габаритный огонь
+              </p>
+              <div class="main__input-wrapper">
+                <label for="comment-field">Комментарий:</label>
+                <input type="text" name="comment" id="comment-field">
+              </div>
+            </div>
+            <div class="main__item-wrapper-info">
+              <span class="main__parts">партиями по 10 шт.</span>
+              <div class="main__signals"></div>
+              <span class="main__waiting">Ожидаем на складе МШ: 1-1 дн.</span>
+              <div class="main__actuality">
+                <span>Добавлено в корзину: 24.02.2020 14:17</span>
+                <span>Актуальность: 24.02.2020 14:17</span>
+              </div>
+            </div>
+            <div class="main__item-wrapper-actions">
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio" id="delete-item">
+                <label for="delete-item">удалить</label>
+              </div>
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio" id="add-item" checked="">
+                <label for="add-item">заказать</label>
+              </div>
+            </div>
+            <div class="main__item-wrapper-amount">
+              <input type="number" name="amount" id="amount" value="10">
+              <label class="visually-hidden" for="amount">Количество</label>
+              <div class="main__buttons-wrapper">
+                <button type="button" class="main__item-button main__item-button--minus">
+                  <span class="visually-hidden">Уменьшить</span>
+                  <span>-</span>
+                </button>
+                <button type="button" class="main__item-button main__item-button--plus">
+                  <span class="visually-hidden">Увеличить</span>
+                  <span>+</span>
+                </button>
+              </div>
+            </div>
+            <div class="main__item-wrapper-price">
+              <span>20.00 руб.</span>
+            </div>
+          </li>
+          <li class="main__item">
+            <div class="main__item-wrapper-number">
+              <img src="img/lamp.png" width="78" height="61" alt="Изображение">
+              <span>1987674542</span>
+            </div>
+            <div class="main__item-wrapper-name">
+              <div class="main__item-wrapper-inner">
+                <span class="main__item-brand">Bosch</span>
+                <span class="main__item-type main__item-type--not-original">Неоригинальная замена</span>
+              </div>
+              <p>
+                Лампа накаливания, фонарь освещения номерного знака;
+                Лампа накаливания, стояночные огни / габаритные фонари;
+                Лампа накаливания, габаритный огонь
+              </p>
+              <div class="main__input-wrapper">
+                <label for="comment-field1">Комментарий:</label>
+                <input type="text" name="comment1" id="comment-field1">
+              </div>
+              <div class="main__lower-price">
+                <span>Цена уменьшилась на 15%</span>
+                <div class="main__lower-price-wrapper checkbox">
+                  <input type="checkbox" name="low-price1" id="low-price1" value="lowed1" checked="">
+                  <label for="low-price1">
+                    <span>подтверждаю</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="main__item-wrapper-info">
+              <span class="main__parts">партиями по 10 шт.</span>
+              <div class="main__signals"></div>
+              <span class="main__waiting">Ожидаем на складе МШ: 1-1 дн.</span>
+              <div class="main__actuality">
+                <span>Добавлено в корзину: 24.02.2020 14:17</span>
+                <span>Актуальность: 24.02.2020 14:17</span>
+              </div>
+            </div>
+            <div class="main__item-wrapper-actions">
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio1" id="delete-item1">
+                <label for="delete-item1">удалить</label>
+              </div>
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio1" id="add-item1" checked="">
+                <label for="add-item1">заказать</label>
+              </div>
+            </div>
+            <div class="main__item-wrapper-amount">
+              <input type="number" name="amount1" id="amount1" value="10">
+              <label class="visually-hidden" for="amount1">Количество</label>
+              <div class="main__buttons-wrapper">
+                <button type="button" class="main__item-button main__item-button--minus">
+                  <span class="visually-hidden">Уменьшить</span>
+                  <span>-</span>
+                </button>
+                <button type="button" class="main__item-button main__item-button--plus">
+                  <span class="visually-hidden">Увеличить</span>
+                  <span>+</span>
+                </button>
+              </div>
+            </div>
+            <div class="main__item-wrapper-price">
+              <span>20.00 руб.</span>
+            </div>
+          </li>
+          <li class="main__item">
+            <div class="main__item-wrapper-number">
+              <img src="img/bottles.png" width="77" height="79" alt="Изображение">
+              <span>1987674542</span>
+            </div>
+            <div class="main__item-wrapper-name">
+              <div class="main__item-wrapper-inner">
+                <span class="main__item-brand">Bosch</span>
+                <span class="main__item-type main__item-type--original">Оригинал</span>
+              </div>
+              <p>
+                Лампа накаливания, фонарь освещения номерного знака;
+                Лампа накаливания, стояночные огни / габаритные фонари;
+                Лампа накаливания, габаритный огонь
+              </p>
+              <div class="main__input-wrapper">
+                <label for="comment-field2">Комментарий:</label>
+                <input type="text" name="comment2" id="comment-field2">
+              </div>
+              <p class="main__attention">
+                Данная позиция не подлежит возврату,
+                так как относится к категории “Жидкости”
+              </p>
+            </div>
+            <div class="main__item-wrapper-info">
+              <span class="main__parts">партиями по 10 шт.</span>
+              <div class="main__signals"></div>
+              <span class="main__waiting">Ожидаем на складе МШ: 1-1 дн.</span>
+              <div class="main__actuality">
+                <span>Добавлено в корзину: 24.02.2020 14:17</span>
+                <span>Актуальность: 24.02.2020 14:17</span>
+              </div>
+            </div>
+            <div class="main__item-wrapper-actions">
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio2" id="delete-item2">
+                <label for="delete-item2">удалить</label>
+              </div>
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio2" id="add-item2" checked="">
+                <label for="add-item2">заказать</label>
+              </div>
+            </div>
+            <div class="main__item-wrapper-amount">
+              <input type="number" name="amount2" id="amount2" value="10">
+              <label class="visually-hidden" for="amount2">Количество</label>
+              <div class="main__buttons-wrapper">
+                <button type="button" class="main__item-button main__item-button--minus">
+                  <span class="visually-hidden">Уменьшить</span>
+                  <span>-</span>
+                </button>
+                <button type="button" class="main__item-button main__item-button--plus">
+                  <span class="visually-hidden">Увеличить</span>
+                  <span>+</span>
+                </button>
+              </div>
+            </div>
+            <div class="main__item-wrapper-price">
+              <span>20.00 руб.</span>
+            </div>
+          </li>
+          <li class="main__item">
+            <div class="main__item-wrapper-number">
+              <img src="img/lamp.png" width="78" height="61" alt="Изображение">
+              <span>1987674542</span>
+            </div>
+            <div class="main__item-wrapper-name">
+              <div class="main__item-wrapper-inner">
+                <span class="main__item-brand">Bosch</span>
+                <span class="main__item-type main__item-type--not-original">Оригинальная замена</span>
+              </div>
+              <p>
+                Лампа накаливания, фонарь освещения номерного знака;
+                Лампа накаливания, стояночные огни / габаритные фонари;
+                Лампа накаливания, габаритный огонь
+              </p>
+              <div class="main__input-wrapper">
+                <label for="comment-field3">Комментарий:</label>
+                <input type="text" name="comment3" id="comment-field3">
+              </div>
+              <div class="main__lower-price">
+                <span>Цена уменьшилась на 15%</span>
+                <div class="main__lower-price-wrapper checkbox">
+                  <input type="checkbox" name="low-price3" id="low-price3" value="lowed3" checked="">
+                  <label for="low-price3">
+                    <span>подтверждаю</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="main__item-wrapper-info">
+              <span class="main__parts">партиями по 10 шт.</span>
+              <div class="main__signals"></div>
+              <span class="main__waiting">Ожидаем на складе МШ: 1-1 дн.</span>
+              <div class="main__actuality">
+                <span>Добавлено в корзину: 24.02.2020 14:17</span>
+                <span>Актуальность: 24.02.2020 14:17</span>
+              </div>
+            </div>
+            <div class="main__item-wrapper-actions">
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio3" id="delete-item3">
+                <label for="delete-item3">удалить</label>
+              </div>
+              <div class="main__item-checkbox-wrapper radio">
+                <input type="radio" name="radio3" id="add-item3" checked="">
+                <label for="add-item3">заказать</label>
+              </div>
+            </div>
+            <div class="main__item-wrapper-amount">
+              <input type="number" name="amount3" id="amount3" value="10">
+              <label class="visually-hidden" for="amount3">Количество</label>
+              <div class="main__buttons-wrapper">
+                <button type="button" class="main__item-button main__item-button--minus">
+                  <span class="visually-hidden">Уменьшить</span>
+                  <span>-</span>
+                </button>
+                <button type="button" class="main__item-button main__item-button--plus">
+                  <span class="visually-hidden">Увеличить</span>
+                  <span>+</span>
+                </button>
+              </div>
+            </div>
+            <div class="main__item-wrapper-price">
+              <span>20.00 руб.</span>
+            </div>
+          </li>
+        </ul>
+        <section class="summary">
+          <h2 class="visually-hidden">Итого</h2>
+          <div class="summary__wrapper">
+            <div class="summary__inner-wrapper summary__inner-wrapper--left">
+              <p>Общая стоимость: <span>3500.00 руб.</span> (включая НДС)</p>
+              <p>Заказано позиций: 1 шт.</p>
+              <p>Заказано деталей: 10 шт.</p>
+              <div class="summary__buttons-wrapper">
+                <button class="button summary__recalculate" type="button" name="button-recalculate" value="recalculate">Пересчитать</button>
+                <a class="summary__reset" href="#">Очистить корзину</a>
+              </div>
+            </div>
+            <div class="summary__inner-wrapper summary__inner-wrapper--right">
+              <p>Итого: <span>3213.00 руб.</span></p>
+              <p>Если вы набрали в корзину все необходимые запчасти и указали их количество,
+                нажмите «Перейти к оформлению» и ваш заказ будет передан на обработку операторам компании.
+              </p>
+            </div>
+          </div>
+          <p class="summary__warning">Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!</p>
+          <p class="summary__description">
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание! В корзине находятся позиции, найденные по спискам оригинальных замен или кросс-листов!
+            Внимание!
+          </p>
+          <div class="summary__checkbox checkbox">
+            <input type="checkbox" name="agreement" id="agreement" value="agreed" checked="">
+            <label for="agreement">
+              <span>Да, я тщательно проверил правильность заказываемых запчастей. С <a href="#" class="summary__rules-link">правилами возврата</a> согласен.</span>
+            </label>
+          </div>
+          <a href="#" class="button summary__make-buying">Оформить заказ на эти товары</a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <h2 class="visually-hidden">Подвал</h2>
+    <div class="footer__wrapper">
+      <a href="#" class="footer__logo-link">
+        <img src="img/logo.svg" width="195" height="40" alt="The Parts">
+      </a>
+      <div class="footer__socials-wrapper">
+        <span>© 2020 THE PARTS</span>
+        <ul class="footer__socials">
+          <li class="footer__socials-item">
+            <a href="#" class="footer__socials-link footer__socials-link--vk">
+              <span class="visually-hidden">ВКонтакте</span>
+              <svg width="30" height="30" viewBox="0 0 30 30">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="#" class="footer__socials-link footer__socials-link--fb">
+              <span class="visually-hidden">Facebook</span>
+              <svg width="30" height="30" viewBox="0 0 30 30">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="#" class="footer__socials-link footer__socials-link--ig">
+              <span class="visually-hidden">Instagramm</span>
+              <svg width="30" height="30" viewBox="0 0 30 30">
+                <use xlink:href="img/sprite.svg#icon-ig"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <span>Санкт-Петербург, Московское шоссе, 13к8</span>
+      </div>
+      <a href="tel:88122108671" class="footer__phone">8 812 210 86 71</a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
